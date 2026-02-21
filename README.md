@@ -63,7 +63,7 @@ br status
 - **17 GitHub Organizations** — 1,825+ repositories
 - **205 Cloudflare Pages Projects** — Global edge deployment
 - **8 Physical Devices** — Pi cluster with 52 TOPS AI compute
-- **Tailscale Mesh** — Secure device-to-device networking
+- **WireGuard Mesh** — Encrypted device-to-device networking across the fleet
 
 ## License
 
