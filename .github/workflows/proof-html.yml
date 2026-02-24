@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, blackroad-fleet]
     steps:
       - uses: anishathalye/proof-html@v1.1.0
         with:
