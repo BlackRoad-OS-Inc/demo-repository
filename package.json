@@ -1,7 +1,11 @@
 {
   "name": "demo-repo",
-  "version": "0.2.0",
-  "description": "A sample package.json",
+  "version": "1.0.0",
+  "description": "BlackRoad OS, Inc. — The operating system for governed AI",
+  "scripts": {
+    "validate": "npx html-validate index.html",
+    "lint": "npx html-validate index.html"
+  },
   "dependencies": {
     "@primer/css": "17.0.1"
   },

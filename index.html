@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BlackRoad OS, Inc.</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>BlackRoad OS, Inc. — The Operating System for Governed AI</title>
+  <meta name="description" content="BlackRoad OS is the infrastructure platform for deploying, monitoring, and governing thousands of autonomous AI agents with cryptographic identity, immutable audit trails, and policy enforcement.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://blackroad.ai/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blackroad.ai/">
+  <meta property="og:title" content="BlackRoad OS, Inc. — The Operating System for Governed AI">
+  <meta property="og:description" content="Deploy, monitor, and govern thousands of autonomous AI agents with cryptographic identity, immutable audit trails, and policy enforcement.">
+  <meta property="og:site_name" content="BlackRoad OS">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BlackRoad OS, Inc. — The Operating System for Governed AI">
+  <meta name="twitter:description" content="Deploy, monitor, and govern thousands of autonomous AI agents with cryptographic identity, immutable audit trails, and policy enforcement.">
   <style>
     :root {
       --hot-pink: #FF1D6C;
@@ -62,36 +77,40 @@
   </style>
 </head>
 <body>
-  <div class="logo">BlackRoad OS</div>
+  <main role="main">
+  <div class="logo" role="heading" aria-level="1">BlackRoad OS</div>
   <p class="tagline">The operating system for governed AI</p>
 
-  <div class="grid">
-    <div class="card">
+  <div class="grid" role="list" aria-label="Key features">
+    <div class="card" role="listitem">
       <h3>Tokenless Gateway</h3>
       <p>Agents never hold API keys. All provider communication routes through the governed gateway with full audit trails.</p>
     </div>
-    <div class="card">
+    <div class="card" role="listitem">
       <h3>30,000 Agents</h3>
       <p>Deploy and orchestrate thousands of autonomous AI agents with cryptographic identity and policy enforcement.</p>
     </div>
-    <div class="card">
+    <div class="card" role="listitem">
       <h3>Multi-Provider</h3>
       <p>Route to Anthropic, OpenAI, Ollama, Gemini, or custom models. Smart routing picks the best provider per task.</p>
     </div>
-    <div class="card">
+    <div class="card" role="listitem">
       <h3>Edge Compute</h3>
       <p>Run inference on Raspberry Pi clusters with Hailo-8 AI accelerators. 52 TOPS of local AI compute.</p>
     </div>
-    <div class="card">
+    <div class="card" role="listitem">
       <h3>RoadChain Ledger</h3>
       <p>Immutable, append-only audit trail with PS-SHA-infinity cryptographic identity chains and tamper detection.</p>
     </div>
-    <div class="card">
+    <div class="card" role="listitem">
       <h3>Policy Engine</h3>
       <p>Define behavioral policies in plain language. Enforce compliance before execution. HIPAA, SOC 2, FedRAMP ready.</p>
     </div>
   </div>
+  </main>
 
+  <footer>
   <p class="footer">&copy; 2024-2026 BlackRoad OS, Inc. All rights reserved.</p>
+  </footer>
 </body>
 </html>
