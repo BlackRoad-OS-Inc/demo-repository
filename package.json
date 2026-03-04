@@ -1,9 +1,25 @@
 {
-  "name": "demo-repo",
-  "version": "0.2.0",
-  "description": "A sample package.json",
+  "name": "blackroad-demo",
+  "version": "1.0.0",
+  "description": "BlackRoad OS — Stripe billing integration with Pi fleet routing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --verbose",
+    "test:e2e": "jest --testPathPattern=tests/e2e --verbose",
+    "test:ci": "jest --ci --forceExit --verbose"
+  },
   "dependencies": {
-    "@primer/css": "17.0.1"
+    "@primer/css": "17.0.1",
+    "express": "^4.21.0",
+    "stripe": "^17.4.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testTimeout": 15000
   },
   "license": "UNLICENSED"
 }
