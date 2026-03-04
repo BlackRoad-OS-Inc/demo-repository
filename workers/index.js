@@ -18,9 +18,29 @@ export default {
 
     // API: enqueue a longer background task and respond immediately
     if (url.pathname === '/api/task' && request.method === 'POST') {
-      const body = await request.json().catch(() => ({}));
+      const contentType = request.headers.get('content-type') || '';
+      if (!contentType.toLowerCase().startsWith('application/json')) {
+        return Response.json(
+          { error: 'Invalid or missing Content-Type, expected application/json' },
+          { status: 400 },
+        );
+      }
+
+      let body;
+      try {
+        body = await request.json();
+      } catch {
+        return Response.json(
+          { error: 'Invalid JSON body' },
+          { status: 400 },
+        );
+      }
+
       ctx.waitUntil(runBackgroundTask(body, env));
-      return Response.json({ queued: true, message: 'Task accepted and processing in background' }, { status: 202 });
+      return Response.json(
+        { queued: true, message: 'Task accepted and processing in background' },
+        { status: 202 },
+      );
     }
 
     // Serve the static landing page for all other GET requests
