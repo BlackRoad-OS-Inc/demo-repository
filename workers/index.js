@@ -71,7 +71,8 @@ async function runBackgroundTask(payload, env) {
   // Simulate processing; replace with real logic (KV writes, D1 queries, etc.)
   const result = { processed: true, payload, ts: Date.now() };
   if (env.RESULTS_KV) {
-    await env.RESULTS_KV.put(`task:${Date.now()}`, JSON.stringify(result), { expirationTtl: 86400 });
+    const taskKey = `task:${Date.now()}:${crypto.randomUUID()}`;
+    await env.RESULTS_KV.put(taskKey, JSON.stringify(result), { expirationTtl: 86400 });
   }
 }
 
