@@ -1,6 +1,5 @@
 # BlackRoad OS, Inc.
 
-<!-- ✅ VERIFIED WORKING — all CI checks pass on main -->
 [![Proof HTML](https://github.com/BlackRoad-OS-Inc/demo-repository/actions/workflows/proof-html.yml/badge.svg)](https://github.com/BlackRoad-OS-Inc/demo-repository/actions/workflows/proof-html.yml)
 [![Auto Assign](https://github.com/BlackRoad-OS-Inc/demo-repository/actions/workflows/auto-assign.yml/badge.svg)](https://github.com/BlackRoad-OS-Inc/demo-repository/actions/workflows/auto-assign.yml)
 [![Deploy to Cloudflare Workers](https://github.com/BlackRoad-OS-Inc/demo-repository/actions/workflows/deploy-worker.yml/badge.svg)](https://github.com/BlackRoad-OS-Inc/demo-repository/actions/workflows/deploy-worker.yml)
