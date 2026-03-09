@@ -1,0 +1,14 @@
+name = "blackroad-demo"
+main = "workers/index.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+ENVIRONMENT = "production"
+
+# Optional: KV namespace binding for background-task result storage.
+# Uncomment and set your namespace ID after running:
+#   wrangler kv:namespace create "RESULTS_KV"
+#
+# [[kv_namespaces]]
+# binding = "RESULTS_KV"
+# id = "<your-kv-namespace-id>"

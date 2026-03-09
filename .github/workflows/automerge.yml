@@ -1,0 +1,23 @@
+name: Automerge
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    # Only automerge PRs from bots (Copilot, Dependabot, etc.)
+    if: >
+      github.actor == 'dependabot[bot]' ||
+      github.actor == 'github-actions[bot]' ||
+      github.actor == 'copilot-swe-agent[bot]'
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - name: Enable automerge
+        uses: peter-evans/enable-pull-request-automerge@a660677d5469627102a1c1e11409dd063606628d # v3.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ github.event.pull_request.number }}
+          merge-method: squash
